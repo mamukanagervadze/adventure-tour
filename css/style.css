@@ -1,0 +1,562 @@
+:root {
+    --color_white: 255, 255, 255;
+    --main_tile_fonts: 'Rozha One', serif;
+    --secendary_title_fonts: 'Roboto', sans-serif;
+    --color_gray: 239, 233, 230;
+    --text_video_font: "Proxima N W01 Reg";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+
+header nav {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+
+
+}
+
+header nav div.right__menu {
+    display: flex;
+    justify-content: flex-end;
+    flex: auto;
+
+}
+
+header nav div.right__menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 25px;
+}
+
+header nav div.right__menu ul li a,
+header nav div.right__menu ul li span {
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+    font-family: var(--secendary_title_fonts);
+
+}
+
+header nav div.right__menu ul li a i {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+header nav div.left__menu a {
+    display: flex;
+    align-items: center;
+
+}
+
+header nav div.site__name {
+    display: flex;
+    align-items: center;
+
+}
+
+header nav div.site__name a {
+    text-decoration: none;
+    color: black;
+    font-family: var(--main_tile_fonts);
+    line-height: 1.41em;
+    font-size: 22px;
+}
+
+div.left__menu {
+    display: flex;
+
+}
+
+
+.logo {
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.poster {
+    display: block;
+    margin-top: 140px;
+    position: relative;
+
+
+}
+
+.poster h1 {
+    font-family: var(--main_tile_fonts);
+    line-height: 1.25em;
+    font-size: 72px;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    margin: 230px 0 22px auto;
+}
+
+.poster__overlay h4 {
+    font-family: var(--secendary_title_fonts);
+    color: white;
+    line-height: 1.67em;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+div.button {
+    display: flex;
+    width: 96px;
+    height: 45px;
+    justify-content: center;
+    border: 1px white solid;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.button3 {
+    display: flex;
+    width: 116px;
+    height: 45px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 1px black solid;
+    margin: 0 auto;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.button3 a {
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    font-family: var(--secendary_title_fonts);
+    font-size: 15px;
+    transition: 1s;
+}
+
+.button3:hover {
+    background-color: black;
+    border: transparent;
+}
+
+.button3:hover a {
+    color: white;
+}
+
+
+
+
+div.button a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    font-family: var(--secendary_title_fonts);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+main section.story div.button {
+    border: 1px black solid;
+    width: 114px;
+    height: 45px;
+}
+
+main section.story div.button a {
+    color: black;
+}
+
+main section.story div.button a:hover {
+    background-color: black;
+    color: white;
+}
+
+div.button a:hover {
+    background-color: white;
+    color: black;
+    border: transparent;
+}
+
+.poster img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.poster__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.story {
+    width: 100%;
+    height: 460px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: rgb(var(--color_gray));
+    justify-content: center;
+}
+
+.story h1 {
+    justify-content: center;
+    text-align: center;
+    font-family: var(--main_tile_fonts);
+    line-height: 1.35em;
+    font-size: 40px;
+    margin-top: 102px;
+    margin-bottom: 25px;
+}
+
+.story p {
+    text-align: center;
+    line-height: 1.875em;
+    font-size: 15px;
+    font-family: var(--secendary_title_fonts);
+    max-width: 780px;
+}
+
+.wraping {
+    display: grid;
+}
+
+section.wraping h2 {
+    text-align: center;
+    line-height: 1.35em;
+    font-size: 40px;
+    font-family: var(--main_tile_fonts);
+    margin-top: 122px;
+    margin-bottom: 122px;
+}
+
+section.wraping div.colmns h3 {
+    font-family: var(--main_tile_fonts);
+    line-height: 1.41em;
+    font-size: 22px;
+    margin-top: 59px;
+    margin-bottom: 32px;
+}
+
+section.wraping div.colmns p {
+    text-align: center;
+    line-height: 1.875em;
+    font-size: 15px;
+    font-family: var(--secendary_title_fonts);
+}
+
+.special {
+    width: 100%;
+    min-height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+
+.colmns {
+    display: block;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.after_slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.overlay_container1,
+.overlay_container2,
+.overlay_container3 {
+    position: relative;
+    cursor: pointer;
+}
+
+div.after_slide img {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+}
+
+.after_slide_overlay1,
+.after_slide_overlay2,
+.after_slide_overlay3 {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: .9s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+
+}
+
+.overlay_container1:hover .after_slide_overlay1,
+.overlay_container2:hover .after_slide_overlay2,
+.overlay_container3:hover .after_slide_overlay3 {
+    height: 100%;
+}
+
+.overlay_container1 .after_slide_overlay1 h3,
+.overlay_container2 .after_slide_overlay2 h3,
+.overlay_container3 .after_slide_overlay3 h3 {
+    font-family: var(--text_video_font);
+    font-size: 20px;
+
+}
+
+.testimonials {
+    min-height: 600px;
+    min-width: 980px;
+    background-color: rgb(var(--color_gray));
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.testimonials_header {
+    position: relative;
+    margin-bottom: 102px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: auto;
+}
+
+section.testimonials div.testimonials_header h2 {
+    font-family: var(--main_tile_fonts);
+    text-align: center;
+    line-height: 1.35em;
+    font-size: 40px;
+    margin-top: 102px;
+}
+
+.testimonials_items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+section.testimonials div.testimonials_items div p {
+    max-width: 240px;
+    font-family: var(--main_tile_fonts);
+    font-size: 22px;
+    margin: 0 auto;
+    margin-bottom: 31px;
+}
+
+section.testimonials div.testimonials_items span {
+    font-family: var(--secendary_title_fonts);
+    font-size: 18px;
+}
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+    /* Set a max width for the container */
+}
+
+/* Style for the image */
+.container-image {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+
+    /* Ensure the image does not exceed its container's height */
+
+
+}
+
+/* Style for the text overlay */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+.image-container .text-overlay h2 {
+    font-family: var(--main_tile_fonts);
+    margin-top: 150px;
+    line-height: 1.35em;
+    font-size: 40px;
+}
+
+.image-container .text-overlay p {
+    font-family: var(--secendary_title_fonts);
+    line-height: 1.75em;
+    font-size: 18px;
+}
+
+.contact-form {
+    min-width: 980px;
+    margin-top: 20px;
+    padding: 20px;
+
+}
+
+/* Style for form fields */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.form-group textarea {
+    resize: vertical;
+    /* Allow vertical resizing of the textarea */
+}
+
+/* Style for the submit button */
+button {
+    display: flex;
+}
+
+.submit-btn {
+    background-color: black;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+iframe {
+    min-width: 100%;
+    height: 450px;
+}
+
+footer {
+
+    height: 45px;
+    margin-top: 80px;
+}
+
+footer p {
+    line-height: 1.79em;
+    text-align: center;
+    font-size: 14px;
+    font-family: var(--secendary_title_fonts);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 0;
+    background-color: rgb(var(--color_gray));
+}
+
+.adress__bar {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.adress__bar h2 {
+    font-size: 40px;
+    font-family: var(--main_tile_fonts);
+
+}
+
+.about-title {
+    display: flex;
+    height: 300px;
+    margin-top: 130px;
+    justify-content: center;
+    background-color: rgb(var(--color_gray));
+    align-items: center;
+}
+
+.about-title h1 {
+    font-size: 40px;
+    font-family: var(--main_tile_fonts);
+
+}
+
+.about-img img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.about_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 780px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+
+.about_description p {
+    font-family: var(--secendary_title_fonts);
+    font-size: 14px;
+    width: 780px;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
