@@ -1,0 +1,79 @@
+@media (max-width: 750px) {
+    header {
+        padding: 0 10px;
+
+    }
+
+    body {
+        max-width: 750px;
+    }
+
+    header nav label {
+        display: block;
+
+    }
+
+    .poster__img {
+        background-image: url(../assets/images/poster-secendory.webp);
+    }
+
+    .special {
+        grid-template-columns: none;
+    }
+
+    .testimonials_items {
+        grid-template-columns: none;
+    }
+
+    header nav ul {
+        width: 100%;
+        height: 100%;
+        top: 80px;
+        left: -100%;
+        position: fixed;
+        z-index: 10;
+        transition: 0.1s all;
+        background-color: white;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+
+    header nav input#bar:checked~ul {
+        left: 0;
+    }
+
+
+    .container-image {
+        background-image: url(../assets/images/wander2.webp);
+        object-position: 100% 50%;
+    }
+
+    .brend a {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cardb {
+        grid-template-columns: none;
+    }
+
+}
+
+@media (min-width: 1350px) {
+    main {
+        max-width: 1350px;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 930px) {
+    .brend {
+        display: block;
+        max-width: 20ch;
+    }
+
+
+}

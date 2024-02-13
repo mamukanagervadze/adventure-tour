@@ -6,44 +6,70 @@
     --text_video_font: "Proxima N W01 Reg";
 }
 
-body {
+* {
+
     margin: 0;
     padding: 0;
 }
 
+main {
+    max-width: 1350px;
+}
+
 header {
-    width: auto;
+    width: 100%;
+    height: 140px;
+    background-color: white;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    background-color: white;
     display: flex;
-    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    box-sizing: border-box;
     z-index: 10;
 }
 
+.brend {
+    width: 100%;
+    max-width: 40ch;
+    margin: 0;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brend h1 {
+    font-size: clamp(10px, 3vw, 22px);
+    font-family: var(--main_tile_fonts);
+    color: black;
+    justify-content: center;
+}
 
 header nav {
-
-    height: 100%;
     width: 100%;
-    display: flex;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 60px;
-    margin-right: 60px;
-
-
-}
-
-header nav div.right__menu {
+    max-height: 140px;
+    flex-grow: 1;
     display: flex;
     justify-content: flex-end;
-    flex: auto;
-
+    align-items: center;
 }
 
-header nav div.right__menu ul {
+header nav input#bar {
+    display: none;
+}
+
+header nav label {
+    font-size: 30px;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+header nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,66 +79,65 @@ header nav div.right__menu ul {
     gap: 25px;
 }
 
-header nav div.right__menu ul li a,
-header nav div.right__menu ul li span {
+header nav ul li a {
     color: black;
     font-size: 14px;
-    font-weight: 300;
-    text-decoration: none;
     font-family: var(--secendary_title_fonts);
-
+    padding: 7px 15px;
+    text-decoration: none;
+    transition: 0.5s ease;
 }
 
-header nav div.right__menu ul li a i {
+header nav ul li a i {
+    color: black;
     font-size: 22px;
     margin-right: 10px;
 }
 
-header nav div.left__menu a {
-    display: flex;
-    align-items: center;
-
-}
-
-header nav div.site__name {
-    display: flex;
-    align-items: center;
-
-}
-
-header nav div.site__name a {
+header nav ul li a:hover {
+    opacity: 70%;
     text-decoration: none;
     color: black;
-    font-family: var(--main_tile_fonts);
-    line-height: 1.41em;
-    font-size: 22px;
-}
-
-div.left__menu {
-    display: flex;
-
 }
 
 
+/*   Zvelikodia qvemot*/
 .logo {
+    display: flex;
     width: 80px;
     height: 80px;
+    text-align: center;
     align-items: center;
     justify-content: center;
 }
 
+
 .poster {
-    display: block;
     margin-top: 140px;
     position: relative;
-
-
+    overflow: hidden;
 }
 
-.poster h1 {
+.poster__img {
+    background-image: url(../assets/images/poster-main.webp);
+    background-size: 100% 800px;
+    height: 800px;
+}
+
+.poster__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.poster__overlay h1 {
     font-family: var(--main_tile_fonts);
     line-height: 1.25em;
-    font-size: 72px;
+    font-size: clamp(30px, 6vw, 72px);
     color: white;
     justify-content: center;
     text-align: center;
@@ -205,20 +230,8 @@ div.button a:hover {
     border: transparent;
 }
 
-.poster img {
-    width: 100%;
-    object-fit: cover;
-}
 
-.poster__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: rgba(0, 0, 0, 0.4);
-}
+
 
 .story {
     width: 100%;
@@ -230,11 +243,10 @@ div.button a:hover {
 }
 
 .story h1 {
-    justify-content: center;
     text-align: center;
     font-family: var(--main_tile_fonts);
     line-height: 1.35em;
-    font-size: 40px;
+    font-size: clamp(25px, 3vw, 40px);
     margin-top: 102px;
     margin-bottom: 25px;
 }
@@ -347,7 +359,7 @@ div.after_slide img {
 
 .testimonials {
     min-height: 600px;
-    min-width: 980px;
+    width: 100%;
     background-color: rgb(var(--color_gray));
     display: flex;
     flex-direction: column;
@@ -369,7 +381,7 @@ section.testimonials div.testimonials_header h2 {
     font-family: var(--main_tile_fonts);
     text-align: center;
     line-height: 1.35em;
-    font-size: 40px;
+    font-size: clamp(35px, 3vw, 40px);
     margin-top: 102px;
 }
 
@@ -399,21 +411,19 @@ section.testimonials div.testimonials_items span {
 .image-container {
     position: relative;
     width: 100%;
-    /* Set a max width for the container */
+
 }
 
-/* Style for the image */
+
 .container-image {
-    width: 100%;
-    max-height: 100%;
+    background-image: url(../assets/images/image\ wander.webp);
+    background-size: 100%;
+    height: 540px;
     object-fit: cover;
-
-    /* Ensure the image does not exceed its container's height */
-
-
+    background-repeat: no-repeat;
 }
 
-/* Style for the text overlay */
+
 .text-overlay {
     position: absolute;
     top: 50%;
@@ -442,13 +452,14 @@ section.testimonials div.testimonials_items span {
 }
 
 .contact-form {
-    min-width: 980px;
+    margin: 0 auto;
+    max-width: 680px;
     margin-top: 20px;
     padding: 20px;
 
 }
 
-/* Style for form fields */
+
 .form-group {
     margin-bottom: 15px;
 }
@@ -468,10 +479,10 @@ section.testimonials div.testimonials_items span {
 
 .form-group textarea {
     resize: vertical;
-    /* Allow vertical resizing of the textarea */
+
 }
 
-/* Style for the submit button */
+
 button {
     display: flex;
 }
@@ -486,17 +497,20 @@ button {
 }
 
 iframe {
-    min-width: 100%;
-    height: 450px;
+    width: 100%;
+    min-height: 450px;
 }
 
 footer {
-
+    width: 100%;
     height: 45px;
     margin-top: 80px;
+    position: relative;
+    bottom: 0;
 }
 
 footer p {
+
     line-height: 1.79em;
     text-align: center;
     font-size: 14px;
@@ -524,7 +538,7 @@ footer p {
 
 .about-title {
     display: flex;
-    height: 300px;
+    min-height: 300px;
     margin-top: 130px;
     justify-content: center;
     background-color: rgb(var(--color_gray));
@@ -546,7 +560,7 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 780px;
+    max-width: 780px;
     margin: 0 auto;
     margin-top: 30px;
 
@@ -555,8 +569,65 @@ footer p {
 .about_description p {
     font-family: var(--secendary_title_fonts);
     font-size: 14px;
-    width: 780px;
+    max-width: 780px;
     text-align: center;
     align-items: center;
     margin-top: 20px;
+}
+
+.cardb {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(240px, 616px));
+    column-gap: 20px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    width: 90%;
+    float: left;
+}
+
+.product-card img {
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.product-description {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.product-card h3 {
+    font-family: var(--main_tile_fonts);
+    font-size: 24px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.product-card p {
+    font-size: 16px;
+    font-family: var(--secendary_title_fonts);
+}
+
+.product-card .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-card button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.product-card button:hover {
+    opacity: 80%;
 }
